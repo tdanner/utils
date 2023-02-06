@@ -41,7 +41,7 @@ jobs:
           ${{ steps.prep.outputs.BRANCH }}
           ${{ steps.prep.outputs.BUILD_ID }}
 
-    - uses: docker/build-push-action@v3
+    - uses: docker/build-push-action@v4
       with:
         platforms: linux/amd64,linux/arm64
         tags: ${{ steps.meta.outputs.tags }}
